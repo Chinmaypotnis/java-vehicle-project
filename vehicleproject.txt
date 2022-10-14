@@ -1,0 +1,1872 @@
+package vehicle;
+
+import java.util.*;
+interface buyingdetails
+{
+	float cusno = 98456;
+	void documents();
+}
+public class vehicle extends editcustomerdetails implements buyingdetails
+{
+    static
+    {
+        System.out.println("WELCOME to  : VIRTUAL VEHICLE SHOWROOM");
+        System.out.println("Best place to find your NEW VEHICLE and USED VEHICLE with few cLICKS!!!! ");
+    }
+    public static void main (String [] args)
+    {
+        System.out.println("Please let us know what are you looking for BRAND NEW VEHICLE or Used VEHICLES ");
+        System.out.println("Please select '1' for New Vehicle OR select '2' for Used Vehicle  ");
+        Scanner sc1 =new Scanner(System.in);
+        int input1 = sc1.nextInt();
+              
+        switch(input1)
+        {
+            case 1 : System.out.println("Its an Amazing movement to buy a new Vehicle !! ");
+                    newVehicle ref1 = new newVehicle();
+                    ref1.Neww();
+                   
+                    break;
+
+            case 2 :System.out.println("Its an Amazing movement to buy a Vehicle !! ");
+                    usedVehicle ref2 =new usedVehicle ();
+                    ref2.old();
+                   
+                    break;
+           
+         
+            default : System.out.println("Please select Above options only!!");
+                     
+                        break;
+        }
+       
+        
+        System.out.println("Please type name of the Vehicle you want to Buy");
+        Scanner sc76 =new Scanner(System.in);
+        String vname=sc76.nextLine();
+        System.out.println("THANKS for buying your vehicle :" +vname+" \n we hope you have felt our support helpfull!!");
+        System.out.println("Customer ID :"+cusno);
+        System.out.println("Please provide your details");
+        editcustomerdetails ref77= new editcustomerdetails();
+        ref77.details();
+        vehicle ref78=new vehicle();
+        ref78.documents();
+        
+     }
+    
+    @Override
+    public void documents()
+    {
+    	 System.out.println("please provide your Adhar number ");
+    	 Scanner sc77 =new Scanner(System.in);
+    	 long adharno=sc77.nextLong();
+    	 System.out.println("Customer Adhar number : "+adharno);
+    	 System.out.println("thanks for Trusting us");
+    	 System.out.println("Your vehicle Delivery date will be informed soon!!!");
+    	 
+    }
+}
+class newVehicle extends vehicle
+{
+
+ static
+    {
+        System.out.println("Please tell us what are you looking for ? ");
+        System.out.println("We have wide varieties of new vehicle range for you!");
+    }
+     void Neww()
+    {
+        System.out.println("Please let us know what kind of new vehicle you are looking for?");
+        System.out.println("Please select '2' for 2-wheeler \n Please select '3' for 3-wheeler \n Please select '4' for 4-wheeler \n Please select '6' for 6-wheelers and above.  \n please select '0' to go back  ");
+        Scanner sc2 =new Scanner(System.in);
+        int wheels = sc2.nextInt();
+        
+        if(wheels==2)
+        {
+            System.out.println("we have some more clarity for you");
+           twoWheeler ref3= new twoWheeler ();
+           ref3.two();
+
+        }
+        else if(wheels==3)
+        {
+            System.out.println("we have some more clarity for you");
+            threeWheeler ref4 =new threeWheeler ();
+            ref4.three();
+        }
+        else if(wheels==4)
+        {
+            System.out.println("we have some more clarity for you");
+            fourWheeler ref5 =new fourWheeler ();
+            ref5.four();
+        } else if (wheels==6)
+        {
+            System.out.println("we have some more clarity for you");
+            sixWheeler ref6 =new sixWheeler ();
+            ref6.six();
+        }
+        else if(wheels==0)
+        {
+        	 Neww();
+        }
+        else
+        {
+        	System.out.println("please enter valid input as described");
+        }
+    }
+ 
+
+
+}
+ class usedVehicle extends vehicle
+{
+   static
+    {
+        System.out.println("HEY ! what are you looking for ? ");
+        System.out.println("We have wide variety of Used vehicle range for you! As per your BUDGET plans.");
+    }
+    void old ()
+    {
+        System.out.println("Please let us know what kind of vehicle you are looking for?");
+        System.out.println("Please select '2' for 2-wheeler \n Please select '3' for 3-wheeler \n Please select '4' for 4-wheeler \n Please select '6' for 6-wheelers and above.  \n please select '0' to go back  ");
+        Scanner sc3 =new Scanner(System.in);
+        int wheels = sc3.nextInt();
+        if(wheels==2)
+        {
+            System.out.println("we have some more clarity for you");
+            usedtwowheeler ref7 =new usedtwowheeler ();
+            ref7.two2();
+        }
+        else if(wheels==3)
+        {
+            System.out.println("we have some more clarity for you");
+            usedthreewheeler ref8 =new usedthreewheeler ();
+            ref8.three3();
+        }
+        else if(wheels==4)
+        {
+            System.out.println("we have some more clarity for you");
+            usedfourwheeler ref9 =new usedfourwheeler ();
+            ref9.four4();
+        } else if (wheels==6)
+        {
+            System.out.println("we have some more clarity for you");
+            usedsixwheeler ref10 =new usedsixwheeler ();
+            ref10.six6();
+        }
+        else if(wheels==0)
+        {
+         old();
+        }
+        else
+        {
+            System.out.println("please enter the options as mention above");
+        }
+    }
+}
+class twoWheeler extends newVehicle
+{
+    void two ()
+    {
+        System.out.println("Are you fitness freak !!! \n than please have a look at bicycles!!");
+        System.out.println("exciting bikes for 'LONG RIDERS' are also awaiting ");
+        System.out.println("please select '1' for bicycle or '2' for bike .\n please select '0' to go back ");
+        Scanner sc4 =new Scanner(System.in);
+        int type1 = sc4.nextInt();
+        if(type1==1)
+        {
+            System.out.println("have a look at crazy bicycles!!");
+            biCycle ref11 = new biCycle();
+            ref11.hero();
+            ref11.hercules();
+            ref11.avon();
+            ref11.BSA_Ladybird();
+
+        }
+        else if(type1==2)
+        {
+            System.out.println("have a look at amazing bikes!!");
+            bike ref12 = new bike();
+            ref12.Brands ();
+
+        }else if(type1==0)
+        {
+        	two();
+        }else
+        {
+        	System.out.println("enter valid input as described above ");
+        }
+
+    }
+}
+class threeWheeler extends newVehicle
+{
+    void three ()
+    {
+        System.out.println("commercial vehicles ");
+        System.out.println("please select the BRAND and TYPE of vehicles ");
+        System.out.println("please select :\n 1-Bajaj Auto \n 2- Piaggio toto\n please select '0' to go back ");
+        Scanner sc6 =new Scanner(System.in);
+        int type1 = sc6.nextInt();
+        if(type1==1)
+        {
+            System.out.println("have a look at bajaj auto!!");
+            bajajauto ref17 = new bajajauto();
+            ref17.info1();
+
+
+        }
+        else if(type1==2)
+        {
+            System.out.println("have a look at Piaggio Toto!!");
+            piaggio ref18 = new piaggio();
+            ref18.info2 ();
+
+        }else if(type1==0)
+        {
+        	three();
+        }else
+        {
+        	System.out.println("enter valid input as described above ");
+        }
+
+    }
+}
+class fourWheeler extends newVehicle
+{
+    void four()
+    {
+        System.out.println("Please select '1' for maruti suzuki \n Please select '2' for TATA \n Please select '3' for Mahindra \n Please select '4' for Hyundai.  \n please select '0' to go back ");
+
+        Scanner sc8 = new Scanner(System.in);
+        int input2 = sc8.nextInt();
+
+        switch (input2)
+        {
+            case 1:
+                System.out.println("Maruti Suzuki is a good choice !! ");
+                msuzuki ref21 = new msuzuki();
+                ref21.com11();
+                ref21.com12();
+                ref21.com13();
+                ref21.com14();
+                break;
+
+            case 2:
+                System.out.println("TATA is Best choice !! ");
+                tata ref22 = new tata();
+                ref22.com21();
+                ref22.com22();
+                ref22.com23();
+                ref22.com24();
+                break;
+            case 3:
+                System.out.println("Mahindra is Best choice !! ");
+                mahindra ref23 = new mahindra();
+                ref23.com31();
+                ref23.com32();
+                ref23.com33();
+                ref23.com34();
+                break;
+            case 4:
+                System.out.println("Hyundai is good choice !! ");
+                hyundai ref24 = new hyundai();
+                ref24.com41();
+                ref24.com42();
+                ref24.com43();
+                ref24.com44();
+                break;
+            case 0 :
+            	four();
+
+            default:
+                System.out.println("Please select Above options only!!");
+                break;
+        }
+    }
+
+}
+class sixWheeler extends newVehicle
+{
+    void six ()
+    {
+        System.out.println("commercial heavy vehicles ");
+        System.out.println("please select the BRAND and TYPE of vehicles ");
+        System.out.println("please select :\n 1-ashok leyland \n 2- Eicher \n  please select '0' to go back ");
+        Scanner sc7 =new Scanner(System.in);
+        int type1 = sc7.nextInt();
+        if(type1==1)
+        {
+            System.out.println("have a look at ashok leyland vehicle!!");
+            akleyland ref19 = new akleyland();
+            ref19.info3();
+
+
+        }
+        else if(type1==2)
+        {
+            System.out.println("have a look at eicher truck!!");
+            eicher ref20 = new eicher();
+            ref20.info4 ();
+
+        }else if(type1==0)
+        {
+        	six();
+        }else
+        {
+        	System.out.println("enter valid input as described above ");
+        }
+
+    }
+}
+class usedtwowheeler extends usedVehicle
+{
+    void two2 ()
+    {
+        System.out.println("Are you fitness freak !!! \n than please have a look at bicycles!!");
+        System.out.println("exciting bikes for 'LONG RIDERS' are also awaiting ");
+        System.out.println("please select '1' for bicycle or '2' for bike .\n  please select '0' to go back ");
+        Scanner sc4 =new Scanner(System.in);
+        int type1 = sc4.nextInt();
+        if(type1==1)
+        {
+            System.out.println("have a look at crazy bicycles!!");
+            Bicycles ref25 = new Bicycles();
+            ref25.hero();
+            ref25.hercules();
+            ref25.avon();
+            ref25.BSA_Ladybird();
+
+        }
+        else if(type1==2)
+        {
+            System.out.println("have a look at amazing bikes!!");
+            Bikes ref26 = new Bikes();
+            ref26.Brandss ();
+
+        }else if(type1==0)
+        {
+        	two2();
+        }else
+        {
+        	System.out.println("enter valid input as described above ");
+        }
+
+    }
+}
+class usedthreewheeler extends usedVehicle
+{
+	void three3 ()
+    {
+        System.out.println("commercial vehicles ");
+        System.out.println("please select the BRAND and TYPE of vehicles ");
+        System.out.println("please select :\n 1-Bajaj Auto \n 2- Piaggio toto. \n  please select '0' to go back ");
+        Scanner sc11 =new Scanner(System.in);
+        int type1 = sc11.nextInt();
+        if(type1==1)
+        {
+            System.out.println("have a look at bajaj auto!!");
+            Bajajautos ref31 = new Bajajautos();
+            ref31.info1();
+
+
+        }
+        else if(type1==2)
+        {
+            System.out.println("have a look at Piaggio Toto!!");
+            Piaggios ref32 = new Piaggios();
+            ref32.info2 ();
+
+        }else if(type1==0)
+        {
+        	three3();
+        }else
+        {
+        	System.out.println("enter valid input as described above ");
+        }
+
+    }
+
+}
+class usedfourwheeler extends usedVehicle
+{
+	 void four4()
+	    {
+	        System.out.println("Please select '1' for maruti suzuki \n Please select '2' for TATA \n Please select '3' for Mahindra \n Please select '4' for Hyundai.  \n please select '0' to go back   ");
+
+	        Scanner sc15 = new Scanner(System.in);
+	        int input2 = sc15.nextInt();
+
+	        switch (input2)
+	        {
+	            case 1:
+	                System.out.println("Maruti Suzuki is a good choice !! ");
+	                Msuzukis ref35 = new Msuzukis();
+	                ref35.com11();
+	                ref35.com12();
+	                ref35.com13();
+	                ref35.com14();
+	                break;
+
+	            case 2:
+	                System.out.println("TATA is Best choice !! ");
+	                Tatas ref36 = new Tatas();
+	                ref36.com21();
+	                ref36.com22();
+	                ref36.com23();
+	                ref36.com24();
+	                break;
+	            case 3:
+	                System.out.println("Mahindra is Best choice !! ");
+	                Mahindras ref37 = new Mahindras();
+	                ref37.com31();
+	                ref37.com32();
+	                ref37.com33();
+	                ref37.com34();
+	                break;
+	            case 4:
+	                System.out.println("Hyundai is good choice !! ");
+	                Hyundais ref38 = new Hyundais();
+	                ref38.com41();
+	                ref38.com42();
+	                ref38.com43();
+	                ref38.com44();
+	                break;
+	            case 0 :
+	            	four4();
+
+	            default:
+	                System.out.println("Please select Above options only!!");
+	                break;
+	        }
+	    }
+
+}
+class usedsixwheeler extends usedVehicle
+{
+	 void six6 ()
+	    {
+	        System.out.println("commercial heavy vehicles ");
+	        System.out.println("please select the BRAND and TYPE of vehicles ");
+	        System.out.println("please select :\n 1-ashok leyland \n 2- Eicher \n please select '0' to go back  ");
+	        Scanner sc12 =new Scanner(System.in);
+	        int type1 = sc12.nextInt();
+	        if(type1==1)
+	        {
+	            System.out.println("have a look at ashok leyland vehicle!!");
+	            Akleylands ref33 = new Akleylands();
+	            ref33.info3();
+
+
+	        }
+	        else if(type1==2)
+	        {
+	            System.out.println("have a look at eicher truck!!");
+	            Eichers ref34 = new Eichers();
+	            ref34.info4 ();
+
+	        }else if(type1==0)
+	        {
+	        	six6();
+	        }else
+	        {
+	        	System.out.println("enter valid input as described above ");
+	        }
+
+	    }
+}
+class biCycle extends twoWheeler
+{
+     double price;
+     String brand;
+     int model_number;
+     String type;
+     void hero()
+    {
+        brand="hero";
+        price=3000.59;
+        model_number=8566;
+        type= "road bike";
+        System.out.println("Brand :"+brand);
+        System.out.println("price :"+price);
+        System.out.println("model_number :"+model_number);
+        System.out.println("Type :"+type);
+        System.out.println("\t\t");
+    }
+     void hercules()
+    {
+        brand="Hercules";
+        price=4600.59;
+        model_number=1066;
+        type= "Mountain  bike";
+        System.out.println("Brand :"+brand);
+        System.out.println("price :"+price);
+        System.out.println("model_number :"+model_number);
+        System.out.println("Type :"+type);
+        System.out.println("\t\t");
+    }
+     void avon()
+    {
+        brand="Avon";
+        price=12000.23;
+        model_number=326;
+        type= "Gear bike";
+        System.out.println("Brand :"+brand);
+        System.out.println("price :"+price);
+        System.out.println("model_number :"+model_number);
+        System.out.println("Type :"+type);
+        System.out.println("\t\t");
+    }
+     void BSA_Ladybird()
+    {
+
+        brand="BSA Ladybird";
+        price=5600.99;
+        model_number=9866;
+        type= "Utility bike";
+        System.out.println("Brand :"+brand);
+        System.out.println("price :"+price);
+        System.out.println("model_number :"+model_number);
+        System.out.println("Type :"+type);
+        System.out.println("\t\t");
+    }
+
+
+}
+class bike extends twoWheeler
+{
+    void Brands ()
+    {
+        System.out.println("please select the BRAND which Attracts you the most!!! ");
+        System.out.println("1-HERO BIKES \n 2-HONDA BIKES \n 3-TVS BIKES \n 4-BAJAJ BIKES \n please select '0' to go back ");
+        Scanner sc5 =new Scanner(System.in);
+        int type2 = sc5.nextInt();
+        switch(type2)
+        {
+            case 1 : System.out.println("Hero Bikes are Amazing");
+                herobikes ref13=new herobikes();
+                ref13.splendor();
+                ref13.passionpro();
+                ref13.xtreme();
+                ref13.pleasure();
+                    break;
+            case 2 : System.out.println("HONDA Bikes are Amazing");
+                hondabikes ref14=new hondabikes();
+                ref14.shine();
+                ref14.unicorn();
+                ref14.hornet();
+                ref14.activa();
+                     break;
+            case 3 : System.out.println("TVS Bikes are Amazing");
+                    tvs ref15=new tvs ();
+                    ref15.rider();
+                    ref15.apache();
+                    ref15.sport();
+                    ref15.jupiter();
+                     break;
+            case 4 : System.out.println("Bajaj Bikes are Amazing");
+                    bajaj ref16=new bajaj();
+                    ref16.pulser();
+                    ref16.platina();
+                    ref16.avenger();
+                    ref16.chetak();
+                    break;
+            case 0 :Brands();        
+            default : System.out.println("please select options from above given");
+                    break;
+        }
+    }
+}
+class herobikes extends bike
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void splendor()
+    {
+        modelname="Splendor";
+        price=87987.345;
+        milage=67.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void passionpro()
+    {
+        modelname="passionpro";
+        price=97987.35;
+        milage=57.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void xtreme()
+    {
+        modelname="xtreme";
+        price=134587.5;
+        milage=47.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void pleasure()
+    {
+        modelname="pleasure";
+        price=117987.945;
+        milage=65.00;
+        colour ="white";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+}
+class hondabikes extends bike
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void shine()
+    {
+        modelname="shine";
+        price=87987.345;
+        milage=67.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void unicorn()
+    {
+        modelname="unicorn";
+        price=97987.35;
+        milage=57.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void hornet()
+    {
+        modelname="hornet";
+        price=134587.5;
+        milage=47.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void activa()
+    {
+        modelname="activa";
+        price=117987.945;
+        milage=65.00;
+        colour ="white";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+}
+class tvs extends bike
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void rider()
+    {
+        modelname="rider";
+        price=87987.345;
+        milage=67.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void apache()
+    {
+        modelname="apache";
+        price=97987.35;
+        milage=57.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void sport()
+    {
+        modelname="sport";
+        price=134587.5;
+        milage=47.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void jupiter()
+    {
+        modelname="jupiter";
+        price=117987.945;
+        milage=65.00;
+        colour ="white";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+}
+class bajaj extends bike
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void pulser()
+    {
+        modelname="pulser";
+        price=87987.345;
+        milage=67.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void platina()
+    {
+        modelname="platina";
+        price=97987.35;
+        milage=57.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void avenger()
+    {
+        modelname="avenger";
+        price=134587.5;
+        milage=47.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void chetak()
+    {
+        modelname="chetak";
+        price=117987.945;
+        milage=65.00;
+        colour ="white";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+}
+class Bicycles extends usedtwowheeler
+{
+    double price;
+    String brand;
+    int model_number;
+    String type;
+    void hero()
+    {
+        brand="hero";
+        price=1500.59;
+        model_number=8566;
+        type= "road bike";
+        System.out.println("Brand :"+brand);
+        System.out.println("price :"+price);
+        System.out.println("model_number :"+model_number);
+        System.out.println("Type :"+type);
+        System.out.println("\t\t");
+    }
+    void hercules()
+    {
+        brand="Hercules";
+        price=2300.59;
+        model_number=1066;
+        type= "Mountain  bike";
+        System.out.println("Brand :"+brand);
+        System.out.println("price :"+price);
+        System.out.println("model_number :"+model_number);
+        System.out.println("Type :"+type);
+        System.out.println("\t\t");
+    }
+    void avon()
+    {
+        brand="Avon";
+        price=6000.23;
+        model_number=326;
+        type= "Gear bike";
+        System.out.println("Brand :"+brand);
+        System.out.println("price :"+price);
+        System.out.println("model_number :"+model_number);
+        System.out.println("Type :"+type);
+        System.out.println("\t\t");
+    }
+    void BSA_Ladybird()
+    {
+
+        brand="BSA Ladybird";
+        price=2600.99;
+        model_number=9866;
+        type= "Utility bike";
+        System.out.println("Brand :"+brand);
+        System.out.println("price :"+price);
+        System.out.println("model_number :"+model_number);
+        System.out.println("Type :"+type);
+        System.out.println("\t\t");
+    }
+
+
+}
+class Bikes extends usedtwowheeler
+{
+    void Brandss ()
+    {
+        System.out.println("please select the BRAND which Attracts you the most!!! ");
+        System.out.println("1-HERO BIKES \n 2-HONDA BIKES \n 3-TVS BIKES \n 4-BAJAJ BIKES \n please select '0' to go back ");
+        Scanner sc9 =new Scanner(System.in);
+        int type4 = sc9.nextInt();
+        switch(type4)
+        {
+            case 1 : System.out.println("Hero Bikes are Amazing");
+                Herobikess ref26=new Herobikess();
+                ref26.splendor();
+                ref26.passionpro();
+                ref26.xtreme();
+                ref26.pleasure();
+                break;
+            case 2 : System.out.println("HONDA Bikes are Amazing");
+                Hondabikess ref27=new Hondabikess();
+                ref27.shine();
+                ref27.unicorn();
+                ref27.hornet();
+                ref27.activa();
+                break;
+            case 3 : System.out.println("TVS Bikes are Amazing");
+                Tvss ref28=new Tvss ();
+                ref28.rider();
+                ref28.apache();
+                ref28.sport();
+                ref28.jupiter();
+                break;
+            case 4 : System.out.println("Bajaj Bikes are Amazing");
+                Bajajs ref29=new Bajajs();
+                ref29.pulser();
+                ref29.platina();
+                ref29.avenger();
+                ref29.chetak();
+                break;
+            case 0:Brandss();    
+            default : System.out.println("please select options from above given");
+                break;
+        }
+    }
+}
+class Herobikess extends Bikes
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void splendor()
+    {
+        modelname="Splendor";
+        price=45987.345;
+        milage=45.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void passionpro()
+    {
+        modelname="passionpro";
+        price=57489.35;
+        milage=35.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void xtreme()
+    {
+        modelname="xtreme";
+        price=64587.5;
+        milage=25.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void pleasure()
+    {
+        modelname="pleasure";
+        price=57987.945;
+        milage=48.00;
+        colour ="white";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+}
+class Hondabikess extends Bikes
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void shine()
+    {
+        modelname="shine";
+        price=42987.345;
+        milage=38.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void unicorn()
+    {
+        modelname="unicorn";
+        price=50987.35;
+        milage=37.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void hornet()
+    {
+        modelname="hornet";
+        price=64587.5;
+        milage=38.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void activa()
+    {
+        modelname="activa";
+        price=67987.945;
+        milage=37.00;
+        colour ="white";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+}
+class Tvss extends Bikes
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void rider()
+    {
+        modelname="rider";
+        price=47987.345;
+        milage=39.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void apache()
+    {
+        modelname="apache";
+        price=46987.35;
+        milage=45.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void sport()
+    {
+        modelname="sport";
+        price=44587.5;
+        milage=38.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void jupiter()
+    {
+        modelname="jupiter";
+        price=57987.945;
+        milage=54.00;
+        colour ="white";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+}
+class Bajajs extends Bikes
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void pulser()
+    {
+        modelname="pulser";
+        price=67987.345;
+        milage=45.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void platina()
+    {
+        modelname="platina";
+        price=47987.35;
+        milage=57.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void avenger()
+    {
+        modelname="avenger";
+        price=54587.5;
+        milage=20.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void chetak()
+    {
+        modelname="chetak";
+        price=77987.945;
+        milage=45.00;
+        colour ="white";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+}
+class bajajauto extends threeWheeler
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+    void info1()
+    {
+        modelname = "auto";
+        price = 117987.945;
+        milage = 65.00;
+        colour = "white";
+        System.out.println("modelname :" + modelname);
+        System.out.println("price :" + price);
+        System.out.println("milage :" + milage + "km/Hr");
+        System.out.println("colour :" + colour);
+        System.out.println("\t\t");
+    }
+}
+class piaggio extends threeWheeler
+{
+    String modelname;
+
+    double price;
+    double milage;
+    String colour;
+    void info2()
+    {
+        modelname = "chetak";
+        price = 117987.945;
+        milage = 65.00;
+        colour = "white";
+        System.out.println("modelname :" + modelname);
+        System.out.println("price :" + price);
+        System.out.println("milage :" + milage + "km/Hr");
+        System.out.println("colour :" + colour);
+        System.out.println("\t\t");
+    }
+}
+class Bajajautos extends usedthreewheeler
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+    void info1()
+    {
+        modelname = "auto";
+        price = 67987.945;
+        milage = 27.00;
+        colour = "white";
+        System.out.println("modelname :" + modelname);
+        System.out.println("price :" + price);
+        System.out.println("milage :" + milage + "km/Hr");
+        System.out.println("colour :" + colour);
+        System.out.println("\t\t");
+    }
+}
+class Piaggios extends usedthreewheeler
+{
+    String modelname;
+
+    double price;
+    double milage;
+    String colour;
+    void info2()
+    {
+        modelname = "chetak";
+        price = 617987.945;
+        milage = 25.00;
+        colour = "white";
+        System.out.println("modelname :" + modelname);
+        System.out.println("price :" + price);
+        System.out.println("milage :" + milage + "km/Hr");
+        System.out.println("colour :" + colour);
+        System.out.println("\t\t");
+    }
+}
+class akleyland extends sixWheeler
+{
+    String modelname;
+
+    double price;
+    double milage;
+    String colour;
+    int capacity;
+    void info3()
+    {
+        modelname = "Ecomet";
+        price = 2617987.945;
+        milage = 15.00;
+        colour = "Brown";
+        capacity=15;
+        System.out.println("modelname :" + modelname);
+        System.out.println("price :" + price);
+        System.out.println("milage :" + milage + "km/Hr");
+        System.out.println("colour :" + colour);
+        System.out.println("capacity :" + capacity+ "ton");
+        System.out.println("\t\t");
+    }
+}
+class eicher extends sixWheeler
+{
+    String modelname;
+
+    double price;
+    double milage;
+    String colour;
+    int capacity;
+    void info4()
+    {
+        modelname = "Pro 3015";
+        price = 3017987.945;
+        milage = 15.00;
+        colour = "Brown";
+        capacity=15;
+        System.out.println("modelname :" + modelname);
+        System.out.println("price :" + price);
+        System.out.println("milage :" + milage + "km/Hr");
+        System.out.println("colour :" + colour);
+        System.out.println("capacity :" + capacity+ "ton");
+        System.out.println("\t\t");
+    }
+}
+class Akleylands extends usedsixwheeler
+{
+    String modelname;
+
+    double price;
+    double milage;
+    String colour;
+    int capacity;
+    void info3()
+    {
+        modelname = "Ecomet";
+        price = 1117987.945;
+        milage = 10.00;
+        colour = "Brown";
+        capacity=15;
+        System.out.println("modelname :" + modelname);
+        System.out.println("price :" + price);
+        System.out.println("milage :" + milage + "km/Hr");
+        System.out.println("colour :" + colour);
+        System.out.println("capacity :" + capacity+ "ton");
+        System.out.println("\t\t");
+    }
+}
+class Eichers extends usedsixwheeler
+{
+    String modelname;
+
+    double price;
+    double milage;
+    String colour;
+    int capacity;
+    void info4()
+    {
+        modelname = "Pro 3015";
+        price = 1617987.945;
+        milage = 9.00;
+        colour = "Brown";
+        capacity=15;
+        System.out.println("modelname :" + modelname);
+        System.out.println("price :" + price);
+        System.out.println("milage :" + milage + "km/Hr");
+        System.out.println("colour :" + colour);
+        System.out.println("capacity :" + capacity+ "ton");
+        System.out.println("\t\t");
+    }
+}
+class msuzuki extends fourWheeler
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void com11()
+    {
+        modelname="Swift";
+        price=887987.345;
+        milage=23.00;
+        colour ="white";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com12()
+    {
+        modelname="Brezza";
+        price=117987.35;
+        milage=17.00;
+        colour ="red";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com13()
+    {
+        modelname="alto";
+        price=534587.5;
+        milage=23.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com14()
+    {
+        modelname="baleno";
+        price=917987.945;
+        milage=18.00;
+        colour ="blue";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+}
+class tata extends fourWheeler
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void com21()
+    {
+        modelname="harrier";
+        price=217987.345;
+        milage=23.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com22()
+    {
+        modelname="safari";
+        price=187987.35;
+        milage=17.00;
+        colour ="red";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com23()
+    {
+        modelname="Nexon";
+        price=534587.5;
+        milage=23.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com24()
+    {
+        modelname="altroz";
+        price=917987.945;
+        milage=18.00;
+        colour ="blue";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+
+}
+class mahindra extends fourWheeler
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void com31()
+    {
+        modelname="Scorpio N";
+        price=2217987.345;
+        milage=23.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com32()
+    {
+        modelname="xuv700";
+        price=1887987.35;
+        milage=17.00;
+        colour ="red";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com33()
+    {
+        modelname="Thar";
+        price=1134587.5;
+        milage=23.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com34()
+    {
+        modelname="Bolero";
+        price=917987.945;
+        milage=18.00;
+        colour ="blue";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+
+}
+class hyundai extends fourWheeler
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void com41()
+    {
+        modelname="Alcazar";
+        price=217987.345;
+        milage=23.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com42()
+    {
+        modelname="Creta";
+        price=187987.35;
+        milage=17.00;
+        colour ="red";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com43()
+    {
+        modelname="venue";
+        price=534587.5;
+        milage=23.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com44()
+    {
+        modelname="verna";
+        price=1317987.945;
+        milage=18.00;
+        colour ="blue";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+
+}
+class Msuzukis extends usedfourwheeler
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void com11()
+    {
+        modelname="Swift";
+        price=387987.345;
+        milage=21.00;
+        colour ="white";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com12()
+    {
+        modelname="Brezza";
+        price=617987.35;
+        milage=10.00;
+        colour ="red";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com13()
+    {
+        modelname="alto";
+        price=234587.5;
+        milage=23.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com14()
+    {
+        modelname="baleno";
+        price=617987.945;
+        milage=18.00;
+        colour ="blue";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+}
+class Tatas extends usedfourwheeler
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void com21()
+    {
+        modelname="harrier";
+        price=1017987.345;
+        milage=23.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com22()
+    {
+        modelname="safari";
+        price=117987.35;
+        milage=17.00;
+        colour ="red";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com23()
+    {
+        modelname="Nexon";
+        price=334587.5;
+        milage=13.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com24()
+    {
+        modelname="altroz";
+        price=417987.945;
+        milage=12.00;
+        colour ="blue";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+
+}
+class Mahindras extends usedfourwheeler
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void com31()
+    {
+        modelname="Scorpio N";
+        price=1217987.345;
+        milage=17.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com32()
+    {
+        modelname="xuv700";
+        price=997987.35;
+        milage=11.00;
+        colour ="red";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com33()
+    {
+        modelname="Thar";
+        price=734587.5;
+        milage=15.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com34()
+    {
+        modelname="Bolero";
+        price=417987.945;
+        milage=10.00;
+        colour ="blue";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+
+}
+class Hyundais extends usedfourwheeler
+{
+    String modelname;
+    double price;
+    double milage;
+    String colour;
+
+    void com41()
+    {
+        modelname="Alcazar";
+        price=777987.345;
+        milage=15.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com42()
+    {
+        modelname="Creta";
+        price=87987.35;
+        milage=11.00;
+        colour ="red";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com43()
+    {
+        modelname="venue";
+        price=534587.5;
+        milage=21.00;
+        colour ="black";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+    void com44()
+    {
+        modelname="verna";
+        price=617987.945;
+        milage=11.00;
+        colour ="blue";
+        System.out.println("modelname :"+modelname);
+        System.out.println("price :"+price);
+        System.out.println("milage :"+milage+"km/Hr");
+        System.out.println("colour :"+colour);
+        System.out.println("\t\t");
+    }
+
+}
+class customer
+{
+	private String name;
+	private String Address;
+	private long accno;
+	private long mobno;
+	
+	public String getname()
+	{
+		return name;
+	}
+	public void setname(String customername)
+	{
+		name=customername;
+	}
+	public String getAddress()
+	{
+		return Address;
+	}
+	public void setAddress(String customerAddress)
+	{
+		Address=customerAddress;
+	}
+	public long getaccno()
+	{
+		return accno;
+	}
+	public void setaccno(long customeraccno)
+	{
+		accno=customeraccno;
+	}
+	public long getmobno()
+	{
+		return mobno;
+	}
+	public void setmobno(long customermobno)
+	{
+		mobno=customermobno;
+	}
+	
+}
+class editcustomerdetails extends customer
+{
+	String cname;
+	String cadd;
+	long cacno;
+	long cmbno;
+	public void details()
+	{
+		Scanner sc71=new Scanner(System.in);
+		System.out.println("Please enter name of Customer :");
+		cname=sc71.nextLine();
+		customer ref61=new customer();
+		ref61.setname(cname);
+		String name =ref61.getname();
+		System.out.println("Customer name :"+name);
+		System.out.println("\t\t");
+		
+		
+		 Scanner sc72=new Scanner(System.in);
+		 System.out.println("Please enter Address of Customer :");
+		 cadd=sc72.nextLine();
+		ref61.setAddress(cadd);
+		String Address =ref61.getAddress();
+		System.out.println("Customer address :"+Address);
+		System.out.println("\t\t");
+		
+		
+		 Scanner sc73=new Scanner(System.in);
+		System.out.println("Please enter  bank account number of Customer :");
+		cacno=sc73.nextLong();
+		ref61.setaccno(cacno);
+		long accno =ref61.getaccno();
+		System.out.println("Customer bank account number : "+accno);
+		System.out.println("\t\t");
+		
+		
+		 Scanner sc74=new Scanner(System.in);
+		 System.out.println("Please enter mobile number of Customer :");
+		 cmbno=sc74.nextLong();
+		ref61.setmobno(cmbno);
+		long mobno =ref61.getmobno();
+		System.out.println("Customer mobible number :"+mobno);
+		System.out.println("\t\t");
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
